@@ -1,0 +1,27 @@
+dubbo:
+
+  application:
+    name: dubbo-customer
+  registry:
+    address: nacos://192.168.226.128:8848
+
+  protocol:
+    name: dubbo
+    port: 20880
+    host: 192.168.226.128
+
+
+
+spring:
+  application:
+    name: dubbo-customer
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root123
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+server:
+  port: 8082
